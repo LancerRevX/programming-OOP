@@ -6,6 +6,8 @@
 #include <iterator>
 #include <queue>
 
+#include "squarematrix.hpp"
+
 template <typename T>
 class Container {
 public:
@@ -20,13 +22,15 @@ public:
         }
     }
 
-    std::string format() {
+    std::string format(bool filter = false) {
         if (list.size() == 0) {
             return "Container is empty!\n";
         }
         std::string result;
         for (auto item : this->list) {
-            result += item->format();
+            if (not filter or dynamic_cast<SquareMatrix*>(item)) {
+                result += item->format();
+            }
         }
         return result;
     }
