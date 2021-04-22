@@ -19,3 +19,13 @@ Matrix* Matrix::create(std::queue<int>& data_queue) {
             throw std::runtime_error("Invalid matrix type!");
     }
 }
+
+int Matrix::get_sum() {
+    int result = 0;
+    for (auto& row : this->data) {
+        for (auto item : row) {
+            result += item;
+        }
+    }
+    return result;
+}

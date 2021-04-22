@@ -10,6 +10,7 @@ public:
     static Matrix* create(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) = 0;
     virtual std::string format() = 0;
+    int get_sum();
 private:
     enum Type {
         SQUARE = 1,
