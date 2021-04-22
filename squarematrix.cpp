@@ -19,6 +19,7 @@ void SquareMatrix::read(std::queue<int>& data_queue) {
             row[i] = data_queue.front(); data_queue.pop();
         }
     }
+    this->print_method = (PrintMethod)data_queue.front(); data_queue.pop();
 }
 
 std::string SquareMatrix::get_name() {

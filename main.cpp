@@ -17,7 +17,6 @@
 #include <vector>
 
 #include "container.hpp"
-#include "matrix.hpp"
 
 int main(int argc, char** argv) {
     if (argc != 3) {
@@ -44,14 +43,14 @@ int main(int argc, char** argv) {
 
     output << "Start" << std::endl;
 
-    Container<Matrix> container;
+    MatrixContainer container;
     container.read(input_data);
     output << "Filled container" << std::endl;
-    output << container.format(Matrix::PrintMethod::BY_ROWS);
+    output << container.format();
     output << "Written container" << std::endl;
     container.clear();
     output << "Cleared container" << std::endl;
-    output << container.format(Matrix::PrintMethod::BY_ROWS);
+    output << container.format();
 
     output << "Stop" << std::endl;
 

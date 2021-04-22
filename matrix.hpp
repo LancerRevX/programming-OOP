@@ -8,12 +8,12 @@ class Matrix
 {
 public:
     enum PrintMethod {
-        BY_ROWS, BY_COLUMNS, ONE_DIMENSIONAL_ARRAY
+        DEFAULT, BY_ROWS, BY_COLUMNS, ONE_DIMENSIONAL_ARRAY
     };
 
     static Matrix* create(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) = 0;
-    std::string format(PrintMethod print_method);
+    std::string format(PrintMethod print_method = DEFAULT);
     virtual std::string get_name() = 0;
 private:
     enum Type {
@@ -22,4 +22,5 @@ private:
     };
 protected:
     std::vector<std::vector<int>> data;
+    PrintMethod print_method;
 };

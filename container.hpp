@@ -8,21 +8,20 @@
 
 #include "matrix.hpp"
 
-template <typename T>
-class Container {
+class MatrixContainer {
 public:
-    Container() {
+    MatrixContainer() {
 
     }
 
     void read(std::vector<int>& data) {
         std::queue<int> data_queue {std::deque<int>(data.begin(), data.end())};
         while (data_queue.size()) {
-            this->list.push_back(T::create(data_queue));
+            this->list.push_back(Matrix::create(data_queue));
         }
     }
 
-    std::string format(Matrix::PrintMethod print_method) {
+    std::string format(Matrix::PrintMethod print_method = Matrix::PrintMethod::DEFAULT) {
         if (list.size() == 0) {
             return "Container is empty!\n";
         }
@@ -40,9 +39,9 @@ public:
         this->list.clear();
     }
 
-    ~Container() {
+    ~MatrixContainer() {
         this->clear();
     }
 private:
-    std::list<T*> list;
+    std::list<Matrix*> list;
 };

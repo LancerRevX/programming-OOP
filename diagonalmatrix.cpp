@@ -17,8 +17,10 @@ void DiagonalMatrix::read(std::queue<int>& data_queue) {
         this->data[i].resize(size);
         this->data[i][i] = data_queue.front(); data_queue.pop();
     }
+    this->print_method = (PrintMethod)data_queue.front(); data_queue.pop();
 }
 
 std::string DiagonalMatrix::get_name() {
     return "Diagonal matrix";
+    
 }
