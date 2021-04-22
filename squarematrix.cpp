@@ -21,7 +21,7 @@ void SquareMatrix::read(std::queue<int>& data_queue) {
     }
 }
 
-std::string SquareMatrix::format() {
+std::string SquareMatrix::format(bool filter) {
     std::string result = "Square matrix:\n";
     for (auto& row : this->data) {
         for (auto item : row) {

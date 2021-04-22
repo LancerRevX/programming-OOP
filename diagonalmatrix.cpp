@@ -19,7 +19,10 @@ void DiagonalMatrix::read(std::queue<int>& data_queue) {
     }
 }
 
-std::string DiagonalMatrix::format() {
+std::string DiagonalMatrix::format(bool filter) {
+    if (filter) {
+        return std::string();
+    }
     std::string result {"Diagonal matrix:\n"};
     for (auto& row : this->data) {
         for (auto item : row) {

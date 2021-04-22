@@ -12,5 +12,5 @@ public:
     SquareMatrix();
     SquareMatrix(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) override;
-    virtual std::string format() override;
+    virtual std::string format(bool filter) override;
 };

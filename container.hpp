@@ -28,9 +28,7 @@ public:
         }
         std::string result;
         for (auto item : this->list) {
-            if (not filter or dynamic_cast<SquareMatrix*>(item)) {
-                result += item->format();
-            }
+            result += item->format(filter);
         }
         return result;
     }

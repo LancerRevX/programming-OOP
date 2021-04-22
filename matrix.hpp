@@ -9,7 +9,7 @@ class Matrix
 public:
     static Matrix* create(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) = 0;
-    virtual std::string format() = 0;
+    virtual std::string format(bool filter = false) = 0;
 private:
     enum Type {
         SQUARE = 1,
