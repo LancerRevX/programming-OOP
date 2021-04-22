@@ -20,6 +20,12 @@ public:
         }
     }
 
+    void sort() {
+        this->list.sort([](T* left, T* right) {
+            return left->get_sum() > right->get_sum();
+        });
+    }
+
     std::string format() {
         if (list.size() == 0) {
             return "Container is empty!\n";
