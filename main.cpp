@@ -47,11 +47,11 @@ int main(int argc, char** argv) {
     Container<Matrix> container;
     container.read(input_data);
     output << "Filled container" << std::endl;
-    output << container.format();
+    output << container.format(Matrix::PrintMethod::BY_ROWS);
     output << "Written container" << std::endl;
     container.clear();
     output << "Cleared container" << std::endl;
-    output << container.format();
+    output << container.format(Matrix::PrintMethod::BY_ROWS);
 
     output << "Stop" << std::endl;
 

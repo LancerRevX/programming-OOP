@@ -6,6 +6,8 @@
 #include <iterator>
 #include <queue>
 
+#include "matrix.hpp"
+
 template <typename T>
 class Container {
 public:
@@ -20,13 +22,13 @@ public:
         }
     }
 
-    std::string format() {
+    std::string format(Matrix::PrintMethod print_method) {
         if (list.size() == 0) {
             return "Container is empty!\n";
         }
         std::string result;
         for (auto item : this->list) {
-            result += item->format();
+            result += item->format(print_method);
         }
         return result;
     }

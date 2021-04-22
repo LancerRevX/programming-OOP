@@ -21,13 +21,6 @@ void SquareMatrix::read(std::queue<int>& data_queue) {
     }
 }
 
-std::string SquareMatrix::format() {
-    std::string result = "Square matrix:\n";
-    for (auto& row : this->data) {
-        for (auto item : row) {
-            result += std::to_string(item) + " ";
-        }
-        result += ";\n";
-    }
-    return result;
+std::string SquareMatrix::get_name() {
+    return "Square matrix";
 }

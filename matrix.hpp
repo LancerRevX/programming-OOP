@@ -7,9 +7,14 @@
 class Matrix
 {
 public:
+    enum PrintMethod {
+        BY_ROWS, BY_COLUMNS, ONE_DIMENSIONAL_ARRAY
+    };
+
     static Matrix* create(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) = 0;
-    virtual std::string format() = 0;
+    std::string format(PrintMethod print_method);
+    virtual std::string get_name();
 private:
     enum Type {
         SQUARE = 1,
