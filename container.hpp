@@ -27,13 +27,13 @@ public:
         });
     }
 
-    std::string format(Matrix::PrintMethod print_method = Matrix::PrintMethod::DEFAULT) {
+    std::string format(Matrix::PrintMethod print_method = Matrix::PrintMethod::DEFAULT, bool filter = false) {
         if (list.size() == 0) {
             return "Container is empty!\n";
         }
         std::string result;
         for (auto item : this->list) {
-            result += item->format(print_method);
+            result += item->format(print_method, filter);
         }
         return result;
     }

@@ -22,7 +22,7 @@ void SquareMatrix::read(std::queue<int>& data_queue) {
     this->print_method = (PrintMethod)data_queue.front(); data_queue.pop();
 }
 
-std::string SquareMatrix::format(PrintMethod print_method) {
+std::string SquareMatrix::format(PrintMethod print_method, bool filter) {
     std::string result {"Square matrix\n"};
     if (print_method == PrintMethod::DEFAULT) {
         print_method = this->print_method;

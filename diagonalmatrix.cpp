@@ -20,7 +20,10 @@ void DiagonalMatrix::read(std::queue<int>& data_queue) {
     this->print_method = (PrintMethod)data_queue.front(); data_queue.pop();
 }
 
-std::string DiagonalMatrix::format(PrintMethod print_method) {
+std::string DiagonalMatrix::format(PrintMethod print_method, bool filter) {
+    if (filter) {
+        return std::string();
+    }
     std::string result {"Diagonal matrix\n"};
     if (print_method == PrintMethod::DEFAULT) {
         print_method = this->print_method;
