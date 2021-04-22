@@ -20,6 +20,12 @@ public:
             this->list.push_back(Matrix::create(data_queue));
         }
     }
+    
+    void sort() {
+        this->list.sort([](Matrix* left, Matrix* right) {
+            return left->get_sum() > right->get_sum();
+        });
+    }
 
     std::string format(Matrix::PrintMethod print_method = Matrix::PrintMethod::DEFAULT) {
         if (list.size() == 0) {
