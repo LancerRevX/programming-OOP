@@ -13,8 +13,7 @@ public:
 
     static Matrix* create(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) = 0;
-    std::string format(PrintMethod print_method = DEFAULT);
-    virtual std::string get_name() = 0;
+    virtual std::string format(PrintMethod print_method = DEFAULT) = 0;
 private:
     enum Type {
         SQUARE = 1,
