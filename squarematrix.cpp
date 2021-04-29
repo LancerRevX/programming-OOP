@@ -2,10 +2,6 @@
 
 #include <string>
 
-SquareMatrix::SquareMatrix() {
-
-}
-
 SquareMatrix::SquareMatrix(std::queue<int>& data_queue) {
     this->read(data_queue);
 }

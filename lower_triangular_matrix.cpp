@@ -23,6 +23,7 @@ void LowerTriangularMatrix::read(std::queue<int>& data_queue) {
             }
         }
     }
+    this->print_method = (PrintMethod)data_queue.front(); data_queue.pop();
 }
 
 std::string LowerTriangularMatrix::format(PrintMethod print_method, bool filter) {
