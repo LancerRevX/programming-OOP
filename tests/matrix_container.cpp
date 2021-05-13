@@ -26,6 +26,24 @@ TEST(Container, read_and_format) {
 }
 
 TEST(Container, sort) {
-    
+    vector data {
+        1,
+        1, 
+        3,
+        1
+    };
+    vector data {
+        1,
+        1, 
+        4,
+        1
+    };
+    vector data {
+        1,
+        1, 
+        9,
+        1
+    };
+    MatrixContainer container
 }
 
