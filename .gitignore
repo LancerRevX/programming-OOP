@@ -1,3 +1,6 @@
-.vscode
 app.exe
 output.txt
+tests/*
+!tests/*.cpp
+!tests/*.hpp
+!tests/CMakeLists.txt
