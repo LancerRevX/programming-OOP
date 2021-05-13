@@ -30,7 +30,7 @@ std::string LowerTriangularMatrix::format(PrintMethod print_method, bool filter)
     if (filter) {
         return std::string();
     }
-    std::string result = "Lower triangular matrix:\n";
+    std::string result = "Lower triangular matrix\n";
     if (print_method == PrintMethod::DEFAULT) {
         print_method = this->print_method;
     }

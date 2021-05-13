@@ -357,6 +357,33 @@ matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\programming-OOP-tests.dir\build.make CMakeFiles/programming-OOP-tests.dir/matrix.cpp.s
 .PHONY : matrix.cpp.s
 
+matrix_container.obj: matrix_container.cpp.obj
+
+.PHONY : matrix_container.obj
+
+# target to build an object file
+matrix_container.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\programming-OOP-tests.dir\build.make CMakeFiles/programming-OOP-tests.dir/matrix_container.cpp.obj
+.PHONY : matrix_container.cpp.obj
+
+matrix_container.i: matrix_container.cpp.i
+
+.PHONY : matrix_container.i
+
+# target to preprocess a source file
+matrix_container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\programming-OOP-tests.dir\build.make CMakeFiles/programming-OOP-tests.dir/matrix_container.cpp.i
+.PHONY : matrix_container.cpp.i
+
+matrix_container.s: matrix_container.cpp.s
+
+.PHONY : matrix_container.s
+
+# target to generate assembly for a file
+matrix_container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\programming-OOP-tests.dir\build.make CMakeFiles/programming-OOP-tests.dir/matrix_container.cpp.s
+.PHONY : matrix_container.cpp.s
+
 square_matrix.obj: square_matrix.cpp.obj
 
 .PHONY : square_matrix.obj
@@ -417,6 +444,9 @@ help:
 	@echo ... matrix.obj
 	@echo ... matrix.i
 	@echo ... matrix.s
+	@echo ... matrix_container.obj
+	@echo ... matrix_container.i
+	@echo ... matrix_container.s
 	@echo ... square_matrix.obj
 	@echo ... square_matrix.i
 	@echo ... square_matrix.s
