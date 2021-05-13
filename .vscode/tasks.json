@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build tests",
+            "command": "mingw32-make",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/tests"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run tests",
+            "command": "programming-OOP-tests.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/tests"
+            },
+            "dependsOn": "Build tests",
+            "problemMatcher": []
+        }
+    ],
+}
