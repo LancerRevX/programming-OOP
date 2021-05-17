@@ -12,6 +12,16 @@ LowerTriangularMatrix::LowerTriangularMatrix(std::queue<int>& data_queue) {
 
 void LowerTriangularMatrix::read(std::queue<int>& data_queue) {
     auto size {data_queue.front()}; data_queue.pop();
+    if (size <= 0) {
+        throw std::runtime_error("Invalid lower triangular matrix size: " + std::to_string(size) + "!");
+    }
+    int required_values_number {0};
+    for (int i {1}; i <= size; i++) {
+        required_values_number += i;
+    }
+    if (data_queue.size() < required_values_number + 1) {
+        throw std::runtime_error("Not enough values to build lower triangular matrix!");
+    }
     this->data.resize(size);
     for (size_t i {0}; i < size; i++) {
         data[i].resize(size);

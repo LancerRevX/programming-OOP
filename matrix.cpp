@@ -7,6 +7,9 @@
 
 Matrix* Matrix::create(std::queue<int>& data_queue) {
     auto type {data_queue.front()}; data_queue.pop();
+    if (data_queue.empty()) {
+        throw std::runtime_error("Unexpected end of data!");
+    }
     switch (type) {
         case Type::SQUARE:
             return new SquareMatrix(data_queue);

@@ -17,6 +17,9 @@ public:
     }
 
     void read(std::vector<int>& data) {
+        if (data.empty()) {
+            std::runtime_error("Data is empty!");
+        }
         std::queue<int> data_queue {std::deque<int>(data.begin(), data.end())};
         while (data_queue.size()) {
             this->list.push_back(Matrix::create(data_queue));

@@ -12,6 +12,12 @@ DiagonalMatrix::DiagonalMatrix(std::queue<int>& data_queue) {
 
 void DiagonalMatrix::read(std::queue<int>& data_queue) {
     auto size {data_queue.front()}; data_queue.pop();
+    if (size <= 0) {
+        throw std::runtime_error("Invalid diagonal matrix size: " + std::to_string(size) + "!");
+    }
+    if (data_queue.size() < size + 1) {
+        throw std::runtime_error("Not enough values to build diagonal matrix!");
+    }
     this->data.resize(size);
     for (size_t i {0}; i < size; i += 1) {
         this->data[i].resize(size);
