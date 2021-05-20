@@ -10,8 +10,10 @@
 
 class MatrixContainer {
 public:
-    MatrixContainer() {
+    MatrixContainer() {}
 
+    MatrixContainer(std::vector<int>& data) {
+        this->read(data);
     }
 
     void read(std::vector<int>& data) {
@@ -23,15 +25,15 @@ public:
     
     void sort() {
         this->list.sort([](Matrix* left, Matrix* right) {
-            return left->get_sum() > right->get_sum();
+            return left->get_sum() < right->get_sum();
         });
     }
 
     std::string format(Matrix::PrintMethod print_method = Matrix::PrintMethod::DEFAULT, bool filter = false) {
         if (list.size() == 0) {
-            return "Container is empty!\n";
+            return "The container is empty!\n";
         }
-        std::string result;
+        std::string result {"The container contains:\n"};
         for (auto item : this->list) {
             result += item->format(print_method, filter);
         }

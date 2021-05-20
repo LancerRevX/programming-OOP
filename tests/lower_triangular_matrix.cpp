@@ -13,7 +13,7 @@ TEST(LowerTriangularMatrix, read_and_format) {
     LowerTriangularMatrix matrix(data_queue);
     ASSERT_EQ(
         matrix.format(), 
-        "Lower triangular matrix:\n"
+        "Lower triangular matrix\n"
         "Print method: by rows\n"
         "1 0 0 ;\n"
         "2 3 0 ;\n"

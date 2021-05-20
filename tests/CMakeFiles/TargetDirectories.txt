@@ -1,3 +1,0 @@
-C:/Users/nikitakirenkov/Projects/programming-OOP/tests/CMakeFiles/edit_cache.dir
-C:/Users/nikitakirenkov/Projects/programming-OOP/tests/CMakeFiles/rebuild_cache.dir
-C:/Users/nikitakirenkov/Projects/programming-OOP/tests/CMakeFiles/programming-OOP-tests.dir

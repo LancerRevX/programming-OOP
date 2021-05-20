@@ -12,6 +12,7 @@ add_executable(
     square_matrix.cpp
     diagonal_matrix.cpp
     lower_triangular_matrix.cpp
+    matrix_container.cpp
     ../matrix.cpp 
     ../squarematrix.cpp 
     ../diagonalmatrix.cpp 
