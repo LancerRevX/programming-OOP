@@ -55,3 +55,14 @@ std::string SquareMatrix::format(PrintMethod print_method, bool filter) {
     return result;
 }
 
+std::string SquareMatrix::format_with(Matrix* right) {
+    return right->format_with_square_matrix();
+}
+
+std::string SquareMatrix::format_with_square_matrix() {
+    return "Two square matrices\n";
+}
+
+std::string SquareMatrix::format_with_diagonal_matrix() {
+    return "Square matrix and diagonal matrix\n";
+}

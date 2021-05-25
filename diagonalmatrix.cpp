@@ -59,3 +59,15 @@ std::string DiagonalMatrix::format(PrintMethod print_method, bool filter) {
     }
     return result;
 }
+
+std::string DiagonalMatrix::format_with(Matrix* matrix) {
+    return matrix->format_with_diagonal_matrix();
+}
+
+std::string DiagonalMatrix::format_with_square_matrix() {
+    return "Diagonal matrix and square matrix\n";
+}
+
+std::string DiagonalMatrix::format_with_diagonal_matrix() {
+    return "Two diagonal matrices\n";
+}

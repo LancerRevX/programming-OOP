@@ -46,11 +46,8 @@ int main(int argc, char** argv) {
     MatrixContainer container;
     container.read(input_data);
     output << "Filled container" << std::endl;
-    output << container.format();
-    output << "Written container" << std::endl;
-    container.clear();
-    output << "Cleared container" << std::endl;
-    output << container.format();
+    output << container.multimethod();
+    output << "Written container multimethod" << std::endl;
 
     output << "Stop" << std::endl;
 
