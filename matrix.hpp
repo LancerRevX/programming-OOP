@@ -4,12 +4,14 @@
 #include <queue>
 #include <vector>
 
-class Matrix
-{
+class Matrix {
 public:
     static Matrix* create(std::queue<int>& data_queue);
     virtual void read(std::queue<int>& data_queue) = 0;
     virtual std::string format() = 0;
+    virtual std::string format_with(Matrix* matrix) = 0;
+    virtual std::string format_with_square_matrix() = 0;
+    virtual std::string format_with_diagonal_matrix() = 0;
 private:
     enum Type {
         SQUARE = 1,
