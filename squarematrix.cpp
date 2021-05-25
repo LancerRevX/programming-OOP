@@ -66,3 +66,7 @@ std::string SquareMatrix::format_with_square_matrix() {
 std::string SquareMatrix::format_with_diagonal_matrix() {
     return "Square matrix and diagonal matrix\n";
 }
+
+std::string SquareMatrix::format_with_lower_triangular_matrix() {
+    return "Square matrix and lower triangular matrix\n";
+}

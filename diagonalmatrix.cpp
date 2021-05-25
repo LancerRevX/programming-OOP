@@ -71,3 +71,7 @@ std::string DiagonalMatrix::format_with_square_matrix() {
 std::string DiagonalMatrix::format_with_diagonal_matrix() {
     return "Two diagonal matrices\n";
 }
+
+std::string DiagonalMatrix::format_with_lower_triangular_matrix() {
+    return "Diagonal matrix and lower triangular matrix\n";
+}

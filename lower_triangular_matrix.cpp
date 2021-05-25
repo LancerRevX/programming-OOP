@@ -65,3 +65,19 @@ std::string LowerTriangularMatrix::format(PrintMethod print_method, bool filter)
     }
     return result;
 }
+
+std::string LowerTriangularMatrix::format_with(Matrix* matrix) {
+    return matrix->format_with_lower_triangular_matrix();
+}
+
+std::string LowerTriangularMatrix::format_with_square_matrix() {
+    return "Lower triangular matrix and square matrix\n";
+}
+
+std::string LowerTriangularMatrix::format_with_diagonal_matrix() {
+    return "Lower triangular matrix and diagonal matrix\n";
+}
+
+std::string LowerTriangularMatrix::format_with_lower_triangular_matrix() {
+    return "Two lower triangular matrices\n";
+}

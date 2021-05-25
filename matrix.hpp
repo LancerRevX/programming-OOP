@@ -17,6 +17,7 @@ public:
     virtual std::string format_with(Matrix* matrix) = 0;
     virtual std::string format_with_square_matrix() = 0;
     virtual std::string format_with_diagonal_matrix() = 0;
+    virtual std::string format_with_lower_triangular_matrix() = 0;
 private:
     enum Type {
         SQUARE = 1,

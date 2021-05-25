@@ -15,4 +15,5 @@ public:
     virtual std::string format_with(Matrix* right) override;
     virtual std::string format_with_square_matrix() override;
     virtual std::string format_with_diagonal_matrix() override;
+    virtual std::string format_with_lower_triangular_matrix() override;
 };
